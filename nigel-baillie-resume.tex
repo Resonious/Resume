@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\renewcommand{\familydefault}{\sfdefault}
+% -----------------------------------------------------------------------
+\def \address{2287 S. Main St.\\Ann Arbor, MI}
+\def \author{Nigel Baillie}
+\def \email{bnigel@umich.edu}
+\def \phonenumber{(734) 678-5328}
+\def \bday{Born April $11^{\text{th}}$ 1995}
+\def \github{https://github.com/Resonious}
+% -----------------------------------------------------------------------
+\reversemarginpar
+
+\usepackage[paper=letterpaper,  marginparwidth=5mm,
+            marginparsep=1.5mm, margin=20mm,
+            noheadfoot,         top=10mm,
+            pdftex]{geometry}
+            
+\usepackage{mathtools}            
+\usepackage{blindtext}
+
+% No indenting
+\setlength{\parindent}{0in}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagestyle{empty}
+\usepackage{color,hyperref}
+
+% ------------------------- Helpers ------------------------------------ %
+\renewcommand{\section}[1]{{\Huge{#1}}\vspace{2 mm}}
+
+\newenvironment{nontimeline}
+        {\begin{tabular}{|p{171 mm}}}
+        {\end{tabular}}
+
+\newenvironment{timeline}
+        {\begin{tabular}{p{21 mm}|p{150 mm}}}
+        {\end{tabular}}
+
+\newenvironment{timelinetitle}
+        {\vspace{-2 mm}\begin{large}}
+        {\end{large}\vspace{-1.5 mm}}
+
+\newcommand{\timespan}[2]{{#2}\newline{#1}}
+
+\newcommand{\hlinewidth}{0.01pt}
+
+% ------------------------- Document ----------------------------------- %
+\begin{document}
+\newlength{\rcollength}\setlength{\rcollength}{3.0in}%
+\begin{tabular} {
+  p{\textwidth/3-\marginparwidth+2mm}
+  p{\textwidth/3-\marginparwidth+2mm}
+  p{\textwidth/3-\marginparwidth+2mm}
+}
+  \begin{flushleft}
+    {\Huge{\author}}\\
+    \vspace{1.5 mm}
+  \end{flushleft}
+  &
+  \begin{center}
+    {\phonenumber}\\
+    {\email}\\
+    {\github}
+  \end{center}
+  &
+  \begin{flushright}
+    {\bday}\\
+    {\address}
+  \end{flushright}
+\end{tabular}
+% ----------------------------------------------------------------------------
+
+\section{Education}
+\hline
+
+\begin{timeline}
+\timespan{Fall 2016}{Present}
+&
+\begin{timelinetitle}
+    University of Michigan
+\end{timelinetitle}
+\begin{itemize}
+  \item \textbf{Major:} Computer Science Engineering.
+\end{itemize}
+
+\\
+
+\timespan{Fall 2012}{Winter 2016}
+&
+\begin{timelinetitle}
+    Washtenaw Community College
+\end{timelinetitle}
+\begin{itemize}
+  \item Attended from second half of highschool through first half of college.
+\end{itemize}
+
+\end{timeline}
+% ----------------------------------------------------------------------------
+
+\vspace{3.0 mm}
+\section{Employment}
+\hline
+% ----------------------------------------------------------------------------
+
+\begin{timeline}
+\timespan{Winter 2014}{Present}
+&
+\begin{timelinetitle}
+    Intermediate Developer at Ann Arbor T-Shirt Company
+\end{timelinetitle}
+\begin{itemize}
+  \item I develop features and bug fixes for our quote building software,
+        production tracker, online store, and main website using \textbf{Ruby on Rails}.
+
+  \item Wrote mobile app for quick pricing using \textbf{React Native}.
+
+  \item \textbf{Proposed} and implemented unified authentication system to provide a single
+        sign-in for all in-house apps.
+
+  \item Built domain specific image composition tool that out-performs ImageMagick
+        at generating t-shirt mockups by about $1.5\times$ using \textbf{C++} and libpng.
+
+  \item Set up \textbf{continuous integration} for automatic testing and deployment of
+        our Rails apps.
+\end{itemize}
+
+\end{timeline}
+% ----------------------------------------------------------------------------
+
+\vspace{3.0 mm}
+\section{Hobby}
+\hline
+% ----------------------------------------------------------------------------
+
+\begin{timeline}
+\timespan{2011}{Present}
+&
+\begin{timelinetitle}
+    Miscellaneous Game Development
+\end{timelinetitle}
+\begin{itemize}
+  \item Participated in 3 \textbf{Ludum Dare} competitions (solo) and 1 jam (team.)
+
+  \item Built a pixel-perfect platformer \textbf{collision detection} system based on
+        the old Sonic the Hedgehog games for Sega Genesis.
+
+  \item Implemented a lockstep-like \textbf{networking} protocol for said platformer
+        using raw UDP (and TCP) sockets.
+
+  \item Built a small 2D sprite renderer in the \textbf{Rust} programming language using
+        \textbf{OpenGL} (``gl'' crate.)
+
+  \item Wrote a runtime \textbf{JVM bytecode} injection routine for a Minecraft mod to disable
+        collision.
+\end{itemize}
+
+\end{timeline}
+
+\end{document}
