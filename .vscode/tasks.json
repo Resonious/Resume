@@ -4,6 +4,6 @@
     "version": "0.1.0",
     "command": "latexmk",
     "isShellCommand": true,
-    "args": [ "-pdf", "--synctex=1", "-interaction=nonstopmode", "-file-line-error", "nigel-baillie-resume.tex" ],
+    "args": [ "-pdf", "--synctex=1", "-interaction=nonstopmode", "-file-line-error", "tc300/resume.tex" ],
     "showOutput": "never"
 }

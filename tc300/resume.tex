@@ -1,24 +1,23 @@
 \documentclass[12pt]{article}
-\renewcommand{\familydefault}{\sfdefault}
 % -----------------------------------------------------------------------
 \def \address{2287 S. Main St.\\Ann Arbor, MI}
 \def \author{Nigel Baillie}
 \def \email{bnigel@umich.edu}
 \def \phonenumber{(734) 678-5328}
 \def \bday{Born April $11^{\text{th}}$ 1995}
-\def \github{https://github.com/Resonious}
+\def \github{github.com/Resonious}
 % -----------------------------------------------------------------------
 \reversemarginpar
 
 \usepackage[paper=letterpaper,  marginparwidth=5mm,
-            marginparsep=1.5mm, margin=20mm,
+            marginparsep=1.5mm, margin=1in,
             noheadfoot,         top=10mm,
             pdftex]{geometry}
-
+            
 \usepackage{mathtools}            
 \usepackage{blindtext}
 
-% No indenting
+% No indenting paragraphs
 \setlength{\parindent}{0in}
 
 \usepackage{fancyhdr}
@@ -69,7 +68,74 @@
     {\address}
   \end{flushright}
 \end{tabular}
-% ----------------------------------------------------------------------------
+% --------------------------- Cover Letter -----------------------------------
+
+Mr. Zak McClendon
+\newline
+Lead Game Designer
+\newline
+Double Fine Productions, Inc.
+\newline
+
+Dear Zak McClendon:
+\newline
+
+I write to express interest in joining Double Fine as a gameplay programmer,
+as per the listing on your website.
+I'm currently a web developer at a local small business, and also a college
+student studying Computer Science at the University of Michigan. In addition
+to my professional and academic profile, I have been practicing game programming
+for fun since I was sixteen and have been playing games for as long as I can
+remember. Between my job, schooling, and hobby, I have developed a diverse
+set of general programming and game development skills.
+\newline
+
+% Hobby paragraph
+To bring to the Double Fine table, I have solid hobbyist experience Unity,
+Unreal Engine 4, and SDL2, in addition to some 2D JavaScript libraries.
+Most notably Unreal Engine 4, of course, as I believe that is the backbone of
+Psychonauts 2. The project I used UE4 in was a Ludum Dare game jam
+entry, a side scrolling puzzle platformer in which the player arranges
+mirrors to redirect beams of light with special abilities. For instance,
+the purple rays propel the player in the direction they point. The game
+was developed mostly using Unreal's C++ interface and later I integrated
+the C++ functionality with Blueprint for quick prototyping. I found the Blueprint
+system is surprisingly fun to work with.
+\newline
+
+% Segway into job
+I'm no mathematician but I am plenty capable at mathematically involved
+tasks. I tought myself OpenGL and the Rust programming language by creating
+a 2D batching sprite renderer that supports scale, rotation about a point, and
+hue adjustment on the shader level. In addition to my hobby projects, my profession
+although not specifically games related, has provided me 3 years of solid
+software engineering experience in areas such as databases, deployment, user
+interface, and error reporting. I even wrote an image compositor for custom t-shirt
+mockups that outperforms ImageMagick by about $1.5\times$.
+\newline
+
+% FINALE ?
+While a games company probably doesn't often write their own CPU compositor,
+I \\ think the under-the-hood knowledge does bear some meaning. More specifically,
+a step towards a more thorough understanding of the systems we work with.
+On the off chance that you'd like a more thorough understanding of the systems
+\textit{I've} worked with, see the enclosed resume. I like what you guys do at
+Double Fine, and I'd be honored to join you. If you don't mind, I'll give you guys
+a call in a couple weeks when you've had time to think things through.
+\newline
+
+Sincerely,
+\newline
+Nigel
+
+
+\pagebreak
+
+% ---------------------------- Resume ----------------------------------------
+\section{Objective}
+\hline
+WANT 2 DO GAMES
+\newline
 
 \section{Education}
 \hline
