@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 \renewcommand{\familydefault}{\sfdefault}
 % -----------------------------------------------------------------------
 \def \address{2287 S. Main St.\\Ann Arbor, MI}
@@ -11,8 +11,8 @@
 \reversemarginpar
 
 \usepackage[paper=letterpaper,  marginparwidth=5mm,
-            marginparsep=1.5mm, margin=20mm,
-            noheadfoot,         top=10mm,
+            marginparsep=1.5mm, margin=15mm,
+            noheadfoot,         top=5mm,
             pdftex]{geometry}
 
 \usepackage{mathtools}            
@@ -72,16 +72,18 @@
 % ----------------------------------------------------------------------------
 
 \section{Education}
-\hline
+%\hline
 
 \begin{timeline}
-\timespan{Fall 2016}{Present}
+\timespan{Fall 2016}{Winter 2019}
 &
 \begin{timelinetitle}
     University of Michigan
 \end{timelinetitle}
 \begin{itemize}
   \item \textbf{Major:} Computer Science Engineering.
+  \item Taken courses in data structures, algorithms, and video game development.
+  \item Worked with team of 4 to complete full multiplayer game for final project.
 \end{itemize}
 
 \\
@@ -93,6 +95,7 @@
 \end{timelinetitle}
 \begin{itemize}
   \item Attended from second half of highschool through first half of college.
+  \item Taken courses in Java and web development.
 \end{itemize}
 
 \end{timeline}
@@ -100,7 +103,7 @@
 
 \vspace{3.0 mm}
 \section{Employment}
-\hline
+%\hline
 % ----------------------------------------------------------------------------
 
 \begin{timeline}
@@ -110,19 +113,20 @@
     Intermediate Developer at Ann Arbor T-Shirt Company
 \end{timelinetitle}
 \begin{itemize}
-  \item I develop features and bug fixes for our quote building software,
-        production tracker, online store, and main website using \textbf{Ruby on Rails}.
+  \item I develop features and fixes in a team of 2--3 for quote building software,
+        production tracker, and retail back end using \textbf{Ruby on Rails}.
 
   \item Wrote mobile app for quick pricing using \textbf{React Native}.
 
-  \item \textbf{Proposed} and implemented unified authentication system to provide a single
-        sign-in for all in-house apps.
+  \item Proposed and implemented \textbf{unified authentication} system to provide a single sign-in for all in-house apps.
 
-  \item Built domain specific image composition tool that out-performs ImageMagick
+  \item Built image composition tool that out-performs ImageMagick
         at generating t-shirt mockups by about $1.5\times$ using \textbf{C++} and libpng.
 
-  \item Set up \textbf{continuous integration} for automatic testing and deployment of
-        our Rails apps.
+  \item Migrated old \textbf{AWS} infrastructure to use AWS Virtual Private Cloud.
+  
+  \item Utilized several $3^\text{rd}$ party APIs for services including Shopify, Amazon, PayPal, and more.
+
 \end{itemize}
 
 \end{timeline}
@@ -130,7 +134,7 @@
 
 \vspace{3.0 mm}
 \section{Hobby}
-\hline
+%\hline
 % ----------------------------------------------------------------------------
 
 \begin{timeline}
@@ -140,19 +144,15 @@
     Miscellaneous Game Development
 \end{timelinetitle}
 \begin{itemize}
-  \item Participated in 3 \textbf{Ludum Dare} competitions (solo) and 1 jam (team.)
+  \item Made video games for 3 \textbf{Ludum Dare} competitions (solo) and 1 jam (team.)
 
-  \item Built a pixel-perfect platformer \textbf{collision detection} system based on
-        the old Sonic the Hedgehog games for Sega Genesis.
+  \item Developed pixel-perfect platformer \textbf{collision detection} system based on collision in old Sonic the Hedgehog games for Sega Genesis.
 
-  \item Implemented a lockstep-like \textbf{networking} protocol for said platformer
-        using raw UDP (and TCP) sockets.
+  \item Implemented a lockstep-like \textbf{networking} protocol for said platformer using raw UDP (and TCP) sockets.
 
-  \item Built a small 2D sprite renderer in the \textbf{Rust} programming language using
-        \textbf{OpenGL} (``gl'' crate.)
+  \item Built a small 2D sprite renderer in the \textbf{Rust} programming language using \textbf{OpenGL}.
 
-  \item Wrote a runtime \textbf{JVM bytecode} injection routine for a Minecraft mod to disable
-        collision.
+  \item Wrote a runtime \textbf{JVM bytecode} injection routine for a Minecraft mod to disable entity collision.
 \end{itemize}
 
 \end{timeline}
