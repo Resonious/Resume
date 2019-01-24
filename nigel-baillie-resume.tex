@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 \renewcommand{\familydefault}{\sfdefault}
 % -----------------------------------------------------------------------
-\def \address{Ann Arbor, MI}
+\def \address{2287 S. Main St. Ann Arbor, MI}
 \def \author{Nigel Baillie}
 \def \email{bnigel@umich.edu}
 \def \phonenumber{(734) 678-5328}
@@ -28,7 +28,7 @@
 \usepackage{color,hyperref}
 
 % ------------------------- Helpers ------------------------------------ %
-\renewcommand{\section}[1]{{\Huge{#1}}\vspace{2 mm}}
+\renewcommand{\section}[1]{{\LARGE{#1}}\vspace{2 mm}}
 
 \newenvironment{nontimeline}
         {\begin{tabular}{|p{171 mm}}}
@@ -55,18 +55,18 @@
   p{\textwidth/3-\marginparwidth+2mm}
 }
   \begin{flushleft}
-    {\Huge{\author}}\\
-    \vspace{1.5 mm}
+    {\address}\\
+    {\phonenumber}
   \end{flushleft}
   &
   \begin{center}
-    {\phonenumber}\\
-    {\email}\\
-    {\github}
+    {\Huge{\author}}\\
+    \vspace{1.5 mm}\\
+    {\email}
   \end{center}
   &
   \begin{flushright}
-    {\address}\\
+    {\github}\\
     {\homepage}
   \end{flushright}
 \end{tabular}
@@ -76,27 +76,15 @@
 %\hline
 
 \begin{timeline}
-\timespan{Fall 2016}{Winter 2019}
+\timespan{Sept 2016}{May 2019}
 &
 \begin{timelinetitle}
-    University of Michigan
+  University of Michigan --- \small{GPA: 3.2}
 \end{timelinetitle}
 \begin{itemize}
-  \item[] \textbf{Major:} Computer Science Engineering.
+  \item[] \textbf{Degree:} Computer Science BSE.
   \item[] \textbf{Courses:} Computer architecture, operating systems, computer security, video game development, artificial intelligence.
 \end{itemize}
-
-\\
-
-Winter 2016
-&
-\begin{timelinetitle}
-    Washtenaw Community College
-\end{timelinetitle}
-\begin{itemize}
-  \item[] \textbf{Courses:} Java programming, web development.
-\end{itemize}
-
 \end{timeline}
 % ----------------------------------------------------------------------------
 
@@ -109,21 +97,21 @@ Winter 2016
 \timespan{Feb 2014}{Sept 2018}
 &
 \begin{timelinetitle}
-    Software Developer at Ann Arbor T-Shirt Company
+  \textbf{Software Developer} \small{at Ann Arbor T-Shirt Company}
 \end{timelinetitle}
 \begin{itemize}
   \item[] Developed features and fixes in a small team for quote building software,
-        production tracker, and retail backend using \textbf{Ruby on Rails}.
+        production tracker, and retail backend using Ruby on Rails.
 
-      \item[] Wrote mobile app for quick pricing using \textbf{React Native}.
+      \item[] Improved image composition tool in C++ using libpng. $1.5\times$ speedup over original.
 
-      \item[] Proposed and implemented \textbf{unified authentication} system to provide single sign-on for all in-house apps.
+      \item[] Set up and managed AWS Virtual Private Cloud infrastructure.
 
-      \item[] Built image composition tool in \textbf{C++} using libpng. $1.5\times$ speedup over original.
-
-      \item[] Set up and managed \textbf{AWS} Virtual Private Cloud infrastructure.
+      \item[] Programmed Arduino to control fans based on temperature for screen drying.
   
       \item[] Integrated with several $3^\text{rd}$ party APIs for services including Shopify, Amazon, PayPal.
+
+      \item[] Implemented robust error reporting and handling across apps.
 
 \end{itemize}
 
@@ -139,31 +127,68 @@ Winter 2016
 \timespan{2011}{Always}
 &
 \begin{timelinetitle}
-    Game Development
+    Small 2D Sprite Renderer in Rust+OpenGL
 \end{timelinetitle}
 \begin{itemize}
-  \item[] Entered in game development competitions like \textbf{Ludum Dare}, in teams as well as solo.
-
-  \item[] Implemented pixel-perfect collision detection and lockstep drop-in networked multiplayer.
-
-  \item[] Built a small 2D sprite renderer in \textbf{Rust} and \textbf{OpenGL}.
-
-  \item[] Wrote a runtime \textbf{JVM bytecode} injection routine for Minecraft to disable entity collision.
+  \item[] GLFW for window management and runtime code reloading:
+    \begin{itemize}
+      \item Main loop in executable, game code in dynamic library. Main loop waits for updated DLL, then re-loads symbols and recompiles shaders.
+    \end{itemize}
 \end{itemize}
 
 \vspace{0.5cm}
 
 \begin{timelinetitle}
-    Miscellaneous
+    JVM Bytecode Patching for Minecraft Mod
 \end{timelinetitle}
 \begin{itemize}
-  \item[] Worked on Wine's (https://winehq.org) shell notification system.
+  \item[] Used \texttt{org.objectweb.asm} namespace to traverse instructions for each class.
+  \item[] Patched entity collision method to potentially return early after performing a test.
+\end{itemize}
 
-  \item[] Installed OpenWRT and Wireguard on router to secure shared condo network.
+\vspace{0.5cm}
 
-  \item[] I maintain my portfolio site (nigelbaillie.me) using a custom static site generator, hosted on Netlify.
+\begin{timelinetitle}
+    Wine (winehq.org) Shell Notification Bugfix
+\end{timelinetitle}
+\begin{itemize}
+  \item[] The bug: ``new folder'' button didn't always show the new folder.
+  \item[] Traced back to unimplemented behavior in \texttt{SHChangeNotifyRegister}.
 \end{itemize}
 
 \end{timeline}
+
+\vspace{3.0 mm}
+
+\begin{tabular}{l l l}
+  \section{Languages} & \section{Technologies} & \section{School Projects} \\
+
+  C, C++, C\#, Java, Ruby, Python,
+  &
+  MacOS, Linux, Windows
+  &
+  Multiplayer game in team of 4.
+  \\
+
+  SQL, Rust, Prolog, Verilog,
+  &
+  Unity3D, Unreal Engine, Godot,
+  &
+  Thread library, memory pager, filsystem.
+  \\
+
+  HTML, CSS, Javascript, \LaTeX
+  &
+  Visual Studio, GNU Make, Git,
+  &
+  NES controller interface circuit.
+  \\
+
+
+  &
+  Wireguard, OpenVPN
+  &
+  \\
+\end{tabular}
 
 \end{document}
